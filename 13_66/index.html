@@ -9,12 +9,15 @@
 
 <body>
     <!-- nav -->
-    <div class="nav flex flex-end">
+    <div class="nav flex space-between">
+        <div class="nav-user">
+            <img src="./pic/FE.png" alt="FE">
+        </div>
         <ul class="flex nav-box">
-            <li class="nav-item white">HOME</li>
-            <li class="nav-item white">PRODUCT</li>
-            <li class="nav-item white">SUPPORT</li>
-            <li class="nav-item white last-nav-item">ABOUT</li>
+            <li class="nav-item white dropdown">HOME</li>
+            <li class="nav-item white dropdown">PRODUCT</li>
+            <li class="nav-item white dropdown">SUPPORT</li>
+            <li class="nav-item white dropdown last-nav-item">ABOUT</li>
         </ul>
     </div>
     <!-- banner-1 -->
@@ -74,8 +77,10 @@
                 </div>
             </div>
         </div>
+
         <!-- 轮播图 -->
         <div class="banner-2">
+            <div class="pic-txt"><p>SOME TEXT</p></div>
             <div class="banner-2-pic">
                 <img src="pic/first.png" alt="first">
             </div>
@@ -148,11 +153,11 @@
         </div>
         <!-- 输入框 -->
         <div class="form flex">
-            <div class="form-item">
+            <div class="form-item input-dropdown">
                 <!-- <select name="country" id="country"></select> -->
                 <input type="text"  placeholder="select your country">
             </div>
-            <div class="form-item">
+            <div class="form-item input-dropdown">
                 <!-- <select name="sex" id="sex"></select> -->
                 <input type="text"  placeholder="select your country">
             </div>
