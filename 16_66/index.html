@@ -85,7 +85,7 @@
         <table class="table">
             <caption class="table-cap">Table Caption</caption>
             <thead>
-                <tr>
+                <tr class="table-row first-row">
                     <th></th>
                     <th>Free Version</th>
                     <th>Personal Version</th>
@@ -93,38 +93,55 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Feature A</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Feature B</td>
+                <tr class="table-row">
+                    <td class="row-title bold">Feature A</td>
                     <td>Some text Some text Some text</td>
                     <td>Some text Some text Some text</td>
                     <td>Some text Some text Some text</td>
                 </tr>
-                <tr>
-                    <td>Feature C</td>
+                <tr class="table-row">
+                    <td class="row-title bold">Feature B</td>
                     <td>Some text Some text Some text</td>
                     <td>Some text Some text Some text</td>
                     <td>Some text Some text Some text</td>
                 </tr>
-                <tr>
-                    <td>Feature D</td>
+                <tr class="table-row">
+                    <td class="row-title bold">Feature C</td>
                     <td>Some text Some text Some text</td>
                     <td>Some text Some text Some text</td>
                     <td>Some text Some text Some text</td>
                 </tr>
-                <tr>
-                    <td>Price</td>
-                    <td>free</td>
-                    <td>$9.99/<sup>mo</sup></td>
-                    <td>$9.99/<sup>mo</sup></td>
+                <tr class="table-row">
+                    <td class="row-title bold">Feature D</td>
+                    <td>Some text Some text Some text</td>
+                    <td>Some text Some text Some text</td>
+                    <td>Some text Some text Some text</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="row-title bold">Price</td>
+                    <td class="free-v bold">free</td>
+                    <td class="personal-v bold">$9.99/<sup>mo</sup></td>
+                    <td class="company-v bold">$9.99/<sup>mo</sup></td>
                 </tr>
             </tbody>
         </table>
+        <!-- form -->
+        <div class="form-box">
+            <div class="form-wrap">
+                <div class="form-itm first-form-itm">
+                    <input type="text" placeholder="select your country">
+                </div>
+                <div class="form-itm">
+                    <input type="text" placeholder="select your region">
+                </div>
+                <div class="form-itm">
+                    <input type="text" placeholder="input your email address">
+                    <input type="button" value="submit" class="btn">
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>&copy; 2017 IFE</footer>
     </div>
 </body>
 
