@@ -100,12 +100,14 @@
             <p class="banner-2-txt">SOME TEXT</p>
         </div>
         <!-- tab -->
-        <div class="tab">
-            <span class="tab-itm">TABONE</span>
-            <span class="tab-itm">TABTWO</span>
-            <span class="tab-itm">TABTHR</span>
-            <span class="tab-itm">TABFOR</span>
+        <div class="tab" id="tabs">
+            <span class="tab-itm active" data-index="0">TABONE</span>
+            <span class="tab-itm" data-index="1">TABTWO</span>
+            <span class="tab-itm" data-index="2">TABTHR</span>
+            <span class="tab-itm" data-index="3">TABFOR</span>
         </div>
+
+        <div id="tab-itm-0" class="tab-itm__content">
         <!-- table -->
         <table class="table">
             <caption class="table-cap">Table Caption</caption>
@@ -150,14 +152,24 @@
                 </tr>
             </tbody>
         </table>
+        </div>
+        <div id="tab-itm-1" class="tab-itm__content">tabtwo</div>
+        <div id="tab-itm-2" class="tab-itm__content">tabthree</div>
+        <div id="tab-itm-3" class="tab-itm__content">tabfour</div>
         <!-- form -->
         <div class="form-box">
             <div class="form-wrap">
                 <div class="form-itm first-form-itm">
-                    <input type="text" placeholder="select your country">
+                    <input readonly type="text" placeholder="select your country">
+                    <div class="dropdown-wrapper">
+                      <ul id="country"></ul>
+                    </div>
                 </div>
                 <div class="form-itm">
-                    <input type="text" placeholder="select your region">
+                    <input readonly type="text" placeholder="select your region">
+                    <div class="dropdown-wrapper">
+                      <ul></ul>
+                    </div>
                 </div>
                 <div class="form-itm">
                     <input type="text" placeholder="input your email address">
