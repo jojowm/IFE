@@ -221,10 +221,6 @@
     left: 0;
 }
 
-.active {
-    z-index: 10;
-}
-
 .index-wrap {
     display: flex;
     justify-content: center;
@@ -250,6 +246,18 @@
     color: #FFF;
 }
 
+/* 淡入淡出 */
+.bg {
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.fadeIn {
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+
 /* tab */
 .tab {
     display: flex;
@@ -264,6 +272,19 @@
     line-height: 60px;
     text-align: center;
     border-bottom: 2px solid #999;
+}
+
+.tab-itm.active {
+    border: 2px solid #999;
+    border-bottom: none;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 /* table */

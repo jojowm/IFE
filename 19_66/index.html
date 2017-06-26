@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>16_66</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./jquery.min.js"></script>
     <script src="./index.js"></script>
 </head>
 
@@ -88,9 +87,9 @@
         <!-- banner-2 -->
         <div class="banner-2">
             <div class="banner-2-pic">
-                <img src="./pic/first.png" alt="first" class="active">
-                <img src="./pic/second.jpg" alt="second">
-                <img src="./pic/third.jpg" alt="third">
+                <img src="./pic/first.png" alt="first" class="bg fadeIn">
+                <img src="./pic/second.jpg" alt="second" class="bg">
+                <img src="./pic/third.jpg" alt="third" class="bg">
             </div>
             <div class="index-wrap">
                 <div class="index"></div>
@@ -101,55 +100,60 @@
         </div>
         <!-- tab -->
         <div class="tab">
-            <span class="tab-itm">TABONE</span>
-            <span class="tab-itm">TABTWO</span>
-            <span class="tab-itm">TABTHR</span>
-            <span class="tab-itm">TABFOR</span>
+            <span class="tab-itm active" data-index="0">TABONE</span>
+            <span class="tab-itm" data-index="1">TABTWO</span>
+            <span class="tab-itm" data-index="2">TABTHR</span>
+            <span class="tab-itm" data-index="3">TABFOR</span>
         </div>
-        <!-- table -->
-        <table class="table">
-            <caption class="table-cap">Table Caption</caption>
-            <thead>
-                <tr class="table-row first-row">
-                    <th></th>
-                    <th>Free Version</th>
-                    <th>Personal Version</th>
-                    <th>Company Version</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="table-row">
-                    <td class="row-title bold">Feature A</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                </tr>
-                <tr class="table-row">
-                    <td class="row-title bold">Feature B</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                </tr>
-                <tr class="table-row">
-                    <td class="row-title bold">Feature C</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                </tr>
-                <tr class="table-row">
-                    <td class="row-title bold">Feature D</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                    <td>Some text Some text Some text</td>
-                </tr>
-                <tr class="table-row">
-                    <td class="row-title bold">Price</td>
-                    <td class="free-v bold">free</td>
-                    <td class="personal-v bold">$9.99/<sup>mo</sup></td>
-                    <td class="company-v bold">$9.99/<sup>mo</sup></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="tab-content active" id="tab-content-0">
+            <!-- table -->
+            <table class="table">
+                <caption class="table-cap">Table Caption</caption>
+                <thead>
+                    <tr class="table-row first-row">
+                        <th></th>
+                        <th>Free Version</th>
+                        <th>Personal Version</th>
+                        <th>Company Version</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td class="row-title bold">Feature A</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="row-title bold">Feature B</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="row-title bold">Feature C</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="row-title bold">Feature D</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                        <td>Some text Some text Some text</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="row-title bold">Price</td>
+                        <td class="free-v bold">free</td>
+                        <td class="personal-v bold">$9.99/<sup>mo</sup></td>
+                        <td class="company-v bold">$9.99/<sup>mo</sup></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-content" id="tab-content-1">tabtwo-content</div>
+        <div class="tab-content" id="tab-content-2">tabthr-content</div>
+        <div class="tab-content" id="tab-content-3">tabfor-content</div>
         <!-- form -->
         <div class="form-box">
             <div class="form-wrap">

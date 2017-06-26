@@ -1,25 +1,62 @@
 window.onload = function() {
-    var aBannerPic = document.getElementsByClassName('banner-2-pic')[0].getElementsByTagName('img');
-    // console.log(aBannerPic);
-    setInterval(func, 1000);
+    carousel();
+    tabSwitch()
 
-    function func() {
-        var $aBannerPic = $(aBannerPic);
-        // var index;
-        for (var i = 0; i < aBannerPic.length; i++) {
-            var $this = $(aBannerPic[i]);
-            if ($this.hasClass('active')) {
-                if (i === aBannerPic.length - 1) {
-                    console.log('in if loop')
-                    $(aBannerPic[0]).addClass('active');
-                } else {
-                    console.log('in else loop')
-                    $(aBannerPic[i + 1]).addClass('active');
-                }
-                $this.removeClass('active');
-                break;
-            }
+
+}
+
+
+// 轮播图 淡入淡出
+function carousel () {
+    var aImg = document.getElementsByClassName('banner-2-pic')[0].getElementsByTagName('img');
+    var index = 0;
+
+    setInterval(turnImg, 2000);
+
+    function fadeIn (e) {
+        e.className = "bg fadeIn";
+    }
+
+    function fadeOut (e) {
+        e.className = "bg";
+    }
+
+    function turnImg () {
+        if (index == aImg.length - 1) {
+            fadeOut(aImg[index]);
+            index = 0;
+            fadeIn(aImg[index]);
+        } else {
+            fadeOut(aImg[index]);
+            index++;
+            fadeIn(aImg[index]);
         }
     }
 }
 
+// tab切换
+function tabSwitch () {
+    var oTab = document.getElementsByClassName('tab')[0];
+    var aTabItm = document.getElementsByClassName('tab-itm');
+    var aTabContent = document.getElementsByClassName('tab-content');
+
+    oTab.addEventListener('click', switchContent, false);
+
+    function switchContent (e) {
+        Array.from(aTabItm).forEach(function(element) {
+            element.className = 'tab-itm';
+        });
+        Array.from(aTabContent).forEach(function(element) {
+            element.className = 'tab-content';
+        });
+
+        e = e || window.event;
+        var targetElement = e.target || e.srcElement;
+        targetElement.className = 'tab-itm active';
+
+
+        var index = targetElement.getAttribute('data-index');
+        var targetContent = document.getElementById('tab-content-' + index);
+        targetContent.className = 'tab-content active';
+    }
+}
