@@ -157,11 +157,25 @@
         <!-- form -->
         <div class="form-box">
             <div class="form-wrap">
-                <div class="form-itm first-form-itm">
-                    <input type="text" placeholder="select your country">
+                <div class="form-itm first-form-itm dropBtn">
+                    <input type="text" placeholder="select your country" class="inputBtn" id="countryInput" data-input="0">
+                    <div class="input-menu">
+                        <ul class="country-menu">
+                            <!-- <li class="country-itm">中国</li>
+                            <li class="country-itm">美国</li>
+                            <li class="country-itm">英国</li> -->
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-itm">
-                    <input type="text" placeholder="select your region">
+                <div class="form-itm dropBtn">
+                    <input type="text" placeholder="select your city" class="inputBtn" id="cityInput" data-input="1">
+                    <div class="input-menu">
+                        <ul class="city-menu">
+                            <!-- <li class="city-itm"></li>
+                            <li class="city-itm"></li>
+                            <li class="city-itm"></li> -->
+                        </ul>
+                    </div>
                 </div>
                 <div class="form-itm">
                     <input type="text" placeholder="input your email address">
