@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: #000;
+}
+
+.nav-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 240px;
+}
+
+.nav-img img {
+    width: 100%;
+}
+
+.nav-wrap {
+    margin-right: 230px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-itm {
+    position: relative;
+    margin-left: 50px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav-itm:not(:hover) > ul {
+    visibility: collapse;
+}
+
+.nav-itm:hover {
+    background: #333;
+}
+
+.nav-menu {
+    list-style: none;
+    text-align: right;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.menu-box {
+    position: absolute;
+    top: 100%;
+    margin-top: 5px;
+    right: -19px;
+    z-index: 10;
+    width: 100px;
+    background: #333;
+}
+
+.dropdown:after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(135deg);
+}
+
+/* banner-1 */
+.banner-1 {
+    display: flex;
+    width: 100%;
+    height: 260px;
+}
+
+.banner-wrap {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background: #2d7079;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+    .title {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1280px) {
+    .title {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .title {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .title {
+        margin-left: 250px;
+    }
+}
+
+.title-1 {
+    font-size: 32px;
+    color: #fff;
+    opacity: .5;
+}
+
+.title-2 {
+    font-size: 44px;
+    color: #fff;
+}
+
+.left-v {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 50px;
+    height: 150px;
+    background: #000;
+    transform: skew(20deg);
+}
+
+.right-v {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 50px;
+    height: 150px;
+    background: #fff;
+    transform: skew(-20deg);
+}
+
+/* content */
+.content {
+    width: 960px;
+    margin: 20px auto 0 auto;
+}
+
+/* show-box */
+.show-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+}
+
+.show-itm {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.last-show-itm {
+    margin-right: 0;
+}
+
+.show-title{
+    align-self: center;
+    margin-left: 20px;
+}
+
+.show-pic {
+    margin-left: 35px;
+}
+
+.show-txt {
+    font-size: 16px;
+    margin: 20px 40px 20px 20px;
+}
+
+.title-3 {
+    font-size: 48px;
+}
+
+.title-4 {
+    font-size: 24px;
+    color: #ccc;
+}
+
+/* banner-2 */
+.banner-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.banner-2-pic {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.banner-2-pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.index-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+
+.index {
+    margin-right: 5px;
+    width: 60px;
+    height: 3px;
+    background: #999;
+    border-radius: 20px;
+}
+
+.banner-2-txt {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    z-index: 11;
+    font-size: 16px;
+    color: #FFF;
+}
+
+/* 淡入淡出 */
+.bg {
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.fadeIn {
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+
+/* tab */
+.tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+.tab-itm {
+    flex: 1;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 2px solid #999;
+}
+
+.tab-itm.active {
+    border: 2px solid #999;
+    border-bottom: none;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-cap {
+    height: 120px;
+    line-height: 120px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.first-row th {
+    border-top: 2px solid #aaa;
+}
+
+.table-row th {
+    width: 25%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    border-bottom: 2px solid #d6d6d6;
+    text-align: center;
+}
+
+.table-row td {
+    height: 60px;
+    padding: 10px 40px;
+    border-bottom: 2px solid #d6d6d6;
+    text-align: center;
+}
+
+.table-row th:nth-child(odd), .table-row td:nth-child(odd) {
+    background: #eee;
+}
+
+.row-title {
+    font-size: 18px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.free-v {
+    color: #417505;
+}
+
+.personal-v {
+    color: #4a90e2;
+}
+
+.company-v {
+    color: #d0021b;
+}
+
+/* form */
+.form-box {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    height:200px;
+    background: url(pic/shakehand.png) no-repeat;
+}
+
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top:
+}
+
+.form-itm {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.first-form-itm {
+    margin-top: 0;
+}
+
+.form-itm input {
+    border: none;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.btn {
+    width: 80px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(bottom, #5e9ce5, #fff);
+    background: linear-gradient(bottom, #5e9ce5, #fff);
+}
+
+.dropBtn {
+    position: relative;
+}
+
+.dropBtn:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 135px;
+    line-height: 10px;
+    border-top: 10px solid #eee;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.input-menu {
+    position: absolute;
+    top: 32px;
+    z-index: 10;
+    /*display: none;*/
+    width: 166px;
+    height: 100px;
+    border: none;
+    background: #fff;
+}
+
+.input-hide {
+    display: none;
+}
+
+.country-itm:hover, .city-itm:hover {
+    background: #eee;
+}
+
+.input-menu ul li {
+    list-style: none;
+}
+/* footer */
+footer {
+    margin-top: 130px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    text-align: center;
+}
