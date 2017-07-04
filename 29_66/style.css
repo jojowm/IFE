@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: #000;
+}
+
+.nav-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 240px;
+}
+
+.nav-img img {
+    width: 100%;
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 230px;
+    height: 100%;
+
+}
+
+.nav-itm {
+    position: relative;
+    /*flex: 1;*/
+    /*margin-left: 50px;*/
+    height: 100%;
+    width: 120px;
+    padding-left: 10px;
+    line-height: 80px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav-itm:not(:hover) > ul {
+    visibility: collapse;
+}
+
+.nav-itm:hover:not(:first-child) {
+    background: #333;
+}
+
+.nav-itm:hover {
+    cursor: pointer;
+}
+
+.nav-menu {
+    list-style: none;
+    text-align: right;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.menu-box {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    width: 150px;
+    background: #333;
+}
+
+.dropdown:after {
+    content: "";
+    position: absolute;
+    right: 19px;
+    top: 32px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(135deg);
+    z-index: 10;
+}
+
+.last-nav-itm {
+    padding-left: 28px;
+}
+
+/* banner-1 */
+.banner-1 {
+    display: flex;
+    width: 100%;
+    height: 260px;
+}
+
+.banner-wrap {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background: #2d7079;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+    .title {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1280px) {
+    .title {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    .title {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .title {
+        margin-left: 250px;
+    }
+}
+
+.title-1 {
+    font-size: 32px;
+    color: #fff;
+    opacity: .5;
+}
+
+.title-2 {
+    font-size: 44px;
+    color: #fff;
+}
+
+.left-v {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 50px;
+    height: 150px;
+    background: #000;
+    transform: skew(20deg);
+}
+
+.right-v {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 50px;
+    height: 150px;
+    background: #fff;
+    transform: skew(-20deg);
+}
+
+/* container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 960px;
+    margin: 10px auto;
+    /*border: 1px solid #000;*/
+}
+
+    /* sidebar */
+#sidebar-outer {
+    overflow: hidden;
+    width: 184px;
+    border: 2px solid #eaeaea;
+}
+
+#sidebar-inner {
+    width: 200px;
+    overflow: auto;
+    background: #efefef;
+}
+
+#sidebar-list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sidebar-item {
+    list-style: none;
+    min-height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.level-2 {
+    background: #fff;
+}
+
+.level-2-hide {
+    display: none;
+}
+
+/*.level-2-show {
+    display: block;
+    background: #fff;
+}*/
+
+.level-2-itm {
+    list-style: none;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+
+    /* table */
+.content {
+    width: 730px;
+    border: 2px solid #e6e6e6;
+}
+
+table, thead, tbody {
+    width: 100%;
+}
+
+thead {
+    background: #ddd;
+}
+
+th, td {
+    border-left: 2px solid #e4e4e4;
+}
+
+.head-row th:first-child, .table-row td:first-child {
+    border-left: none;
+}
+
+.head-row, .table-row {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.table-row td, .head-row th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-row:nth-child(even) {
+    background: #efefef;
+}
+
+button {
+    font-weight: 700;
+    width: 35px;
+    height: 20px;
+    margin-left: 5px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.fix-head {
+    position: fixed;
+    top: 0;
+}
