@@ -197,6 +197,10 @@
     text-align: center;
 }
 
+.sidebar-item:hover {
+    cursor: pointer;
+}
+
 .level-2 {
     background: #fff;
 }
