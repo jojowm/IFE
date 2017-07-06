@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
+
 /* nav */
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -29,7 +31,6 @@
     align-items: center;
     margin-right: 230px;
     height: 100%;
-
 }
 
 .nav-itm {
@@ -90,7 +91,9 @@
     padding-left: 28px;
 }
 
+
 /* banner-1 */
+
 .banner-1 {
     display: flex;
     width: 100%;
@@ -163,16 +166,19 @@
     transform: skew(-20deg);
 }
 
+
 /* container */
+
 .container {
     display: flex;
     justify-content: space-around;
     width: 960px;
     margin: 10px auto;
-    /*border: 1px solid #000;*/
 }
 
-    /* sidebar */
+
+/* sidebar */
+
 #sidebar-outer {
     overflow: hidden;
     width: 184px;
@@ -209,11 +215,6 @@
     display: none;
 }
 
-/*.level-2-show {
-    display: block;
-    background: #fff;
-}*/
-
 .level-2-itm {
     list-style: none;
     font-size: 14px;
@@ -222,13 +223,16 @@
 }
 
 
-    /* table */
+/* table */
+
 .content {
     width: 730px;
     border: 2px solid #e6e6e6;
 }
 
-table, thead, tbody {
+table,
+thead,
+tbody {
     width: 100%;
 }
 
@@ -236,21 +240,25 @@ thead {
     background: #ddd;
 }
 
-th, td {
+th,
+td {
     border-left: 2px solid #e4e4e4;
 }
 
-.head-row th:first-child, .table-row td:first-child {
+.head-row th:first-child,
+.table-row td:first-child {
     border-left: none;
 }
 
-.head-row, .table-row {
+.head-row,
+.table-row {
     width: 100%;
     height: 50px;
     line-height: 50px;
 }
 
-.table-row td, .head-row th {
+.table-row td,
+.head-row th {
     text-align: center;
     vertical-align: middle;
 }
@@ -259,7 +267,7 @@ th, td {
     background: #efefef;
 }
 
-button {
+.btn {
     font-weight: 700;
     width: 35px;
     height: 20px;
@@ -272,4 +280,69 @@ button {
 .fix-head {
     position: fixed;
     top: 0;
+}
+
+
+/* 遮罩 */
+
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    width: 100%;
+    background: #e8e8e8;
+    opacity: 0.6;
+}
+
+.maskHide {
+    display: none;
+}
+
+.maskShow {
+    display: block;
+}
+
+#editWindow, #deleteWindow {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    z-index: 11;
+    width: 500px;
+    height: 300px;
+    background: #fff;
+}
+
+.edit-itm, .del-itm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.edit-itm input {
+    height: 30px;
+}
+
+.edit-itm.edit-btn, .del-itm.del-btn {
+    justify-content: space-around;
+}
+
+.edit-btn, .del-btn {
+    margin-top: 20px;
+}
+
+.edit-btn-itm {
+    font-size: 20px;
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    width: 80px;
+    height: 40px;
 }
