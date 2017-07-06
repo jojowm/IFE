@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>25_66</title>
+    <title>29_66</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="./data.js"></script>
     <script src="./index.js"></script>
@@ -58,13 +58,41 @@
     </div>
     <!-- content -->
     <div class="container">
+        <div id="mask" class="maskHide"></div>
+        <div id="editWindow">
+            <div class="edit-itm">
+                <label for="edit-name">Name</label>
+                <input type="text" id="edit-name">
+            </div>
+            <div class="edit-itm">
+                <label for="edit-content">Content</label>
+                <input type="text" id="edit-content">
+            </div>
+            <div class="edit-itm">
+                <label for="edit-value">Value</label>
+                <input type="text" id="edit-value">
+            </div>
+            <div class="edit-itm edit-btn">
+                <button class="edit-btn-itm edit-confirm">确认</button>
+                <button class="edit-btn-itm cancel">取消</button>
+            </div>
+        </div>
+        <div id="deleteWindow">
+            <div class="del-itm">
+                <span>确认要删除<span id="del-fill"></span>吗？</span>
+            </div>
+            <div class="del-itm del-btn">
+                <button class="edit-btn-itm del-confirm">确认</button>
+                <button class="edit-btn-itm cancel">取消</button>
+            </div>
+        </div>
         <div id="sidebar-outer">
             <div id="sidebar-inner">
                 <ul id="sidebar-list"></ul>
             </div>
         </div>
         <div class="content">
-            <div>
+            <div id="table-container">
                 <table class="table-content" cellspacing="0">
                     <thead id="table-head">
                         <tr class="head-row">
@@ -74,267 +102,7 @@
                             <th>TableHead</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td>Content Text</td>
-                            <td>Content Tex Text</td>
-                            <td>123.432</td>
-                            <td>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                                <button>BTN</button>
-                            </td>
-                        </tr>
+                    <tbody id="table-value">
                     </tbody>
                 </table>
             </div>
