@@ -6,9 +6,6 @@ window.onload = function() {
 
 function scrollPage() {
     var thead = document.getElementById('table-head');
-    var atd = document.getElementsByClassName('table-row')[0].getElementsByTagName('td');
-    var ath = document.getElementsByClassName('head-row')[0].getElementsByTagName('th');
-
     document.addEventListener('scroll', function() {
         fixThead();
         resetHerght()
@@ -16,7 +13,9 @@ function scrollPage() {
 
     // 页面滚动时，固定thead
     function fixThead() {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var atd = document.getElementsByClassName('table-row')[0].getElementsByTagName('td');
+        var ath = document.getElementsByClassName('head-row')[0].getElementsByTagName('th');
+        var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
         if (scrollTop >= 350) {
             thead.className = 'fix-head';
             var tdArray = Array.from(atd);
@@ -163,11 +162,12 @@ function buildTable() {
             body.style.overflow = 'hidden';
         }
 
-
-
         // 弹出编辑框
         var editWindow = document.getElementById('editWindow');
         editWindow.style.display = 'flex';
+        editWindow.style.top = window.innerHeight / 2 - 150 + 'px';
+        editWindow.style.left = window.innerWidth / 2 - 250 + 'px';
+        // console.log(window.innerHeight);
 
         // 编辑框的placeholder
         var e = e || window.event;
@@ -177,6 +177,11 @@ function buildTable() {
         var editValue = document.getElementById('edit-value');
 
         var trNode = eTarget.parentNode.parentNode;
+        // 清空上次输入的值
+        editName.value = '';
+        editContent.value = '';
+        editValue.value = '';
+
         editName.placeholder = trNode.childNodes[0].innerText;
         editContent.placeholder = trNode.childNodes[1].innerText;
         editValue.placeholder = trNode.childNodes[2].innerText;
@@ -186,9 +191,9 @@ function buildTable() {
         for (var v = 0; v < editConfirm.length; v++) {
             editConfirm[v].onclick = function() {
                 // 点击确认按钮时，改变表格中的值
-                trNode.childNodes[0].innerText = editName.value;
-                trNode.childNodes[1].innerText = editContent.value;
-                trNode.childNodes[2].innerText = editValue.value;
+                trNode.childNodes[0].innerText = editName.value || trNode.childNodes[0].innerText;
+                trNode.childNodes[1].innerText = editContent.value || trNode.childNodes[1].innerText;
+                trNode.childNodes[2].innerText = editValue.value || trNode.childNodes[2].innerText;
                 // 收起弹框和遮罩
                 editWindow.style.display = 'none';
                 mask.className = 'maskHide';
@@ -257,14 +262,8 @@ function buildTable() {
                 body.style.overflow = 'auto';
             }
         }
-
-
-
     }
-
 }
-
-
 
 function hasClass(ele, cls) {
     return ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
