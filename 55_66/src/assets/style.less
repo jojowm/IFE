@@ -1,0 +1,218 @@
+@bg: #e8e8e8;
+@light-red: #feebeb;
+@light-green: #edfeec;
+@btn: #d9d9d9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// 标题栏
+.title-add {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  background: @bg;
+
+  p {
+    width: 50px;
+    font-size: 2.5rem;
+  }
+
+  .home {
+    width: 10%;
+    height: 70%;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .edit {
+    display: none;
+    width: 20%;
+    height: 70%;
+    font-size: 2.5rem;
+  }
+}
+// 优先级栏
+.priority {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  background: @light-red;
+
+  .priority-itm {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    &:last-child {
+      margin-right: 100px;
+    }
+
+    span {
+      font-size: 2rem;
+      margin-left: 10px;
+    }
+  }
+}
+
+.first-priority {
+  background: #cf031f;
+  &:before, &:after {
+    background: #cf031f !important;
+    border-left-color: #cf031f !important;
+  }
+}
+
+.second-priority {
+  background: #f7e739;
+  &:before, &:after {
+    background: #f7e739 !important;
+    border-left-color: #f7e739 !important;
+  }
+}
+
+.third-priority {
+  background: #41750c;
+  &:before, &:after {
+    background: #41750c !important;
+    border-left-color: #41750c !important;
+  }
+}
+
+.round {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+// 进度栏
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  background: @light-green;
+
+  .progress-itm {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+
+    &:last-child {
+      margin-right: 100px;
+    }
+
+    span {
+      font-size: 2rem;
+      margin-left: 10px;
+    }
+  }
+}
+
+.doing {
+  position: relative;
+  width: 40px;
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 50px solid @btn;
+    top: -20px;
+  }
+}
+
+.to-do {
+  position: relative;
+  width: 40px;
+  &:before {
+    content: '';
+    width: 14px;
+    height: 50px;
+    position: absolute;
+    background: @bg;
+    top: -20px;
+  }
+  &:after {
+    content: '';
+    width: 14px;
+    height: 50px;
+    position: absolute;
+    background: @bg;
+    top: -20px;
+    left: 18px;
+  }
+}
+
+.done {
+  position: relative;
+  width: 40px;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: @bg;
+    top: -20px;
+  }
+}
+
+// 具体事项
+#content {
+  font-size: 2.2rem;
+  padding-bottom: 80px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 3px solid #ccc;
+  p {
+    margin-left: 50px;
+    font-size: 2.2rem;
+  }
+}
+
+// One thing
+.one-thing {
+  font-size: 2.5rem;
+}
+
+// edit frame
+#edit-frame {
+  display: none;
+
+  textarea {
+    width: 100%;
+    border: none;
+  }
+}
+
+// footer
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background: @bg;
+  font-size: 2.5rem;
+  position: fixed;
+  bottom: 0;
+}
